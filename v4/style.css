@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #DFF2EB;
+    color: #091057;
+}
+
+header {
+    background: linear-gradient(135deg, #6200ea , #6900ea);
+    color: #fff;
+    text-align: center;
+    padding: 3em 0;
+    animation: slideDown 1.5s ease;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.5em;
+    color: #FFECC8;
+}
+
+section {
+    padding: 2em;
+    margin: 1em 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Different styles for various sections */
+
+.alternate-style {
+    background: #f0e7ff;
+    border-left: 8px solid #6200ea;
+}
+
+.bordered ul {
+    padding: 1em;
+    border: 2px solid #6200ea;
+    border-radius: 5px;
+    padding :10px;
+    list-style-type: none;
+}
+
+.image-background {
+    background: url('image.png') no-repeat center center/cover;
+    color: white;
+    padding: 4em;
+}
+
+.icon-style ul li {
+    padding: 0.5em;
+    background: #6200ea;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.icon-style ul li:hover {
+    transform: scale(1.1);
+}
+
+.badge-style ul li {
+    background: #4a148c;
+    color: #fff7d1;
+    padding: 0.8em;
+    margin: 0.5em 0;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.badge-style ul li:hover {
+    transform: translateY(-3px);
+}
+
+.grid-style ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.grid-style ul li {
+    flex: 1 1 45%;
+    background: #e1bee7;
+    padding: 1em;
+    text-align: center;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.grid-style ul li:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
